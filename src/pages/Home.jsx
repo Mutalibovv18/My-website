@@ -72,6 +72,51 @@ const Home = () => {
         </motion.div>
       </section>
 
+
+      {/* About Section */}
+      <section className="py-20 px-4" id="about">
+        <div className="max-w-6xl mx-auto">
+          <motion.h2 
+            className="text-4xl font-bold text-center mb-16"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+          >
+            Who We Are
+          </motion.h2>
+          
+          <motion.div 
+            className="grid md:grid-cols-2 gap-12 items-center"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+          >
+            <motion.div 
+              className="rounded-xl overflow-hidden"
+              whileHover={{ scale: 1.02 }}
+              whileTap={{ scale: 0.98 }}
+            >
+              <img
+                src= {studio}
+                alt="Founder"
+                className="w-full h-full object-cover"
+              />
+            </motion.div>
+            <div>
+              <p className="text-xl text-gray-400 mb-6">
+                We're a team of email marketing experts passionate about helping e-commerce brands reach their full potential. With years of experience and a data-driven approach, we've helped numerous brands achieve significant growth through strategic email marketing.
+              </p>
+              <Link
+                to="/book-demo"
+                className="bg-[#7EE7F1] text-black font-semibold px-8 py-4 rounded-full inline-block hover:opacity-90 transition-opacity"
+              >
+                Partner With Us
+              </Link>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
       {/* Features Section */}
       <section className="py-20 px-4">
         <motion.div 
@@ -224,49 +269,6 @@ const Home = () => {
         </div>
       </section>
 
-      {/* About Section */}
-      <section className="py-20 px-4" id="about">
-        <div className="max-w-6xl mx-auto">
-          <motion.h2 
-            className="text-4xl font-bold text-center mb-16"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-          >
-            Who We Are
-          </motion.h2>
-          
-          <motion.div 
-            className="grid md:grid-cols-2 gap-12 items-center"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-          >
-            <motion.div 
-              className="rounded-xl overflow-hidden"
-              whileHover={{ scale: 1.02 }}
-              whileTap={{ scale: 0.98 }}
-            >
-              <img
-                src= {studio}
-                alt="Founder"
-                className="w-full h-full object-cover"
-              />
-            </motion.div>
-            <div>
-              <p className="text-xl text-gray-400 mb-6">
-                We're a team of email marketing experts passionate about helping e-commerce brands reach their full potential. With years of experience and a data-driven approach, we've helped numerous brands achieve significant growth through strategic email marketing.
-              </p>
-              <Link
-                to="/book-demo"
-                className="bg-[#7EE7F1] text-black font-semibold px-8 py-4 rounded-full inline-block hover:opacity-90 transition-opacity"
-              >
-                Partner With Us
-              </Link>
-            </div>
-          </motion.div>
-        </div>
-      </section>
 
       {/* FAQ Section */}
       <section className="py-20 px-4" id="faq">
